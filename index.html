@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Blue Horizon - Hong Kong Floating Wind Project</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Inter 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hero-bg {
+            /* 建议：使用高质量浮式风机图片或视频 */
+            background-image: url('https://placehold.co/1920x1080/003366/FFFFFF?text=High-Quality+Visual+of+Floating+Turbines');
+            background-size: cover;
+            background-position: center;
+        }
+        /* 简单的卡片悬停动效 */
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        /* 用于平滑滚动时的导航栏偏移 */
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 
+      导航栏 (Navbar)
+      严格按照 Part 1-4 的演示顺序
+    -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800">
+                Deep Blue Horizon
+            </div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#part1" class="text-gray-600 hover:text-blue-600 font-medium">Global Outlook (Part 1)</a>
+                <a href="#part2" class="text-gray-600 hover:text-blue-600 font-medium">Strategic Comparison (Part 2)</a>
+                <a href="#part3" class="text-gray-600 hover:text-blue-600 font-medium">Technology &amp; Principles (Part 3)</a>
+                <a href="#part4" class="text-gray-600 hover:text-blue-600 font-medium">Hong Kong Case (Part 4)</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 font-medium transition duration-300">Contact Us</a>
+            </div>
+            <!-- 移动端菜单按钮 (简化) -->
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 
+          开场: Homepage Vision (演示开始)
+          由组员1开始介绍，作为整个演示的引言。
+        -->
+        <section id="home" class="hero-bg text-white min-h-[70vh] flex items-center">
+            <div class="container mx-auto px-6 py-24 text-center bg-black bg-opacity-40 rounded-lg">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Unlocking the Deep Blue</h1>
+                <h2 class="text-2xl md:text-3xl font-light mb-8">Pioneering Floating Wind in Hong Kong, Empowering the Greater Bay Area's Energy Future</h2>
+                <p class="max-w-3xl mx-auto text-lg mb-10">
+                    Our Mission: To deliver Hong Kong's first bankable, strategic floating wind project, creating a springboard to unlock the gigawatt-scale clean energy market in the South China Sea.
+                </p>
+                <a href="#part1" class="bg-white text-blue-800 px-8 py-3 rounded-md font-bold text-lg hover:bg-gray-100 transition duration-300">
+                    Explore the Project
+                </a>
+            </div>
+        </section>
+        
+
+<!-- 
+                  团队介绍 (Company Background)
+                  增加了组员名字
+                -->
+                <div class="bg-gray-100 p-12 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-center mb-8">About Us (Company Background)</h3>
+                    <p class="text-center max-w-3xl mx-auto text-gray-700 mb-10">
+                        We are an interdisciplinary project team dedicated to delivering Hong Kong's first strategic floating wind project. Our expertise combines cutting-edge market analysis, deep systems engineering, rigorous scientific principles, and clear business strategy, aiming to provide a safe, reliable, and high-value solution for the Greater Bay Area's energy transition.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="text-sm font-bold text-gray-900 mb-2">Member 1: [Insert Name Here]</p>
+                            <h4 class="text-lg font-semibold text-blue-700">✔ Part 1: Market Analysis</h4>
+                            <p class="text-gray-600 text-sm">Global Market Opportunity &amp; Policy Research</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="text-sm font-bold text-gray-900 mb-2">Member 2: [Insert Name Here]</p>
+                            <h4 class="text-lg font-semibold text-blue-700">✔ Part 2: Strategic Positioning</h4>
+                            <p class="text-gray-600 text-sm">Technology Comparison &amp; Resource Analysis</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="text-sm font-bold text-gray-900 mb-2">Member 3: [Insert Name Here]</p>
+                            <h4 class="text-lg font-semibold text-blue-700">✔ Part 3: Technology &amp; Engineering</h4>
+                            <p class="text-gray-600 text-sm">Solution, Scientific Principles, &amp; Innovation</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <p class="text-sm font-bold text-gray-900 mb-2">Member 4: [Insert Name Here]</p>
+                            <h4 class="text-lg font-semibold text-blue-700">✔ Part 4: Business Strategy</h4>
+                            <p class="text-gray-600 text-sm">Hong Kong Case Study &amp; ROI Analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 
+          板块 1: 全局视野 (Part 1)
+          演示者：组员 1
+          内容：市场机遇 (图表) + 公司背景 (团队)
+        -->
+        <section id="part1" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Part 1: Global Outlook (The Opportunity)</h2>
+                <p class="text-xl text-center text-gray-600 mb-16">Why We Act Now: A Global Market on the Verge of Explosion.</p>
+
+                <!-- 市场图表 (Visuals) -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-semibold text-center mb-8">The Market is on the Eve of a Breakout</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- 视觉 1: 市场增长 -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-semibold mb-4 text-center">Global Annual New Installation Forecast</h4>
+                            <div class="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
+                                <!-- <img src="[Your Chart Link]" alt="Global Market Growth Forecast Chart" class="object-contain h-full w-full"> -->
+                                <p class="text-gray-500">[Visual: Market Growth Forecast Chart (GWEC, 2021)]</p>
+                            </div>
+                            <p class="mt-4 text-center text-gray-700">Authoritative body (GWEC) forecasts the global market will **accelerate** after 2025, reaching **39.98 GW** in new annual capacity by 2030.</p>
+                        </div>
+                        <!-- 视觉 2: 成本下降 -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-semibold mb-4 text-center">LCOE Costs Have Been Validated</h4>
+                            <div class="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
+                                <!-- <img src="[Your Chart Link]" alt="LCOE Cost Reduction Curve" class="object-contain h-full w-full"> -->
+                                <p class="text-gray-500">[Visual: LCOE Reduction Curve]</p>
+                            </div>
+                            <p class="mt-4 text-center text-gray-700">Technology is mature: Costs have fallen from **300k CNY/kW** (early prototype) to **40k CNY/kW** (commercial project) (Floating Offshore Wind, 2023).</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+        <!-- 
+          板块 2: 战略对比 (Part 2)
+          演示者：组员 2
+          内容：战略对比 (表格) + 深入分析 (新增Visuals)
+        -->
+        <section id="part2" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Part 2: Strategic Comparison (The Strategy)</h2>
+                <p class="text-xl text-center text-gray-600 mb-16">Why Floating is Hong Kong's Only Long-Term Choice.</p>
+
+                <!-- 2.1: 对比表格 (Form/Table) -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-semibold text-center mb-8">Floating vs. Fixed: A Comprehensive Comparison</h3>
+                    <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                        <table class="min-w-full text-left">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-4 font-semibold">Metric</th>
+                                    <th class="p-4 font-semibold">Fixed-Bottom (Traditional)</th>
+                                    <th class="p-4 font-semibold text-blue-600">Floating (Our Solution)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">Resource Access</td>
+                                    <td class="p-4 text-gray-700">Limited to shallow water (&lt; 60m)</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">Unlocks deep water (&gt; 60m)</span> - Accessing 80% of global wind resources</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">Environmental &amp; Social Impact</td>
+                                    <td class="p-4 text-gray-700"><span class="text-red-600 font-bold">High:</span> Noisy pile driving, seabed damage, and <span class="font-bold">competes</span> with fishing/shipping/eco-zones.</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">Low:</span> No pile driving, and strategically **avoids** sensitive near-shore areas.</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">Energy Efficiency</td>
+                                    <td class="p-4 text-gray-700">Limited by near-shore winds (~45% Capacity Factor)</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">Higher:</span> Accesses stronger, steadier offshore winds (e.g., Hywind > 57% CF)²</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">Local Industry</td>
+                                    <td class="p-4 text-gray-700">Reliant on expensive, specialized installation vessels.</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">Activates Local Industry:</span> Assembled at quayside, leveraging local shipbuilding and construction.</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">Technical Bottleneck</td>
+                                    <td class="p-4 text-gray-700">XXL Monopiles (>2000 tons) face D/t ratio limits, driving exponential cost growth.³</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">Modular &amp; Scalable</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 text-right">
+                        Sources: 2. Equinor (Hywind Scotland data); 3. BOSLAN (2022)
+                    </p>
+                </div>
+
+                <!-- 
+                  深入分析
+                  增加了组员2要求的额外Visuals
+                -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-semibold text-center mb-12">Deep Dive: Why Floating is the Superior Asset</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- 视觉 1: OpenFAST -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">Dynamic Stability</h4>
+                            <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[Visual: Dynamic Response Simulation (OpenFAST)]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">Data:</span> Advanced simulations (OpenFAST, ref. Kim et al., 2023) confirm high platform stability in extreme seas, ensuring smooth power output.
+                            </p>
+                        </div>
+                        <!-- 视觉 2: LCA / 碳足迹 -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">Environmental &amp; Social Advantage</h4>
+                            <!-- [v5 最终修改]: 整合了 World Bank (2024) 的论点 -->
+                            <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[Visual: Life Cycle Carbon Footprint Comparison Chart]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">Data:</span> LCA analysis (Yuan et al., 2023) shows that floating wind's carbon footprint is only **25.76g CO2/kWh**, far lower than other energy sources.
+                            </p>
+                             <ul class="list-disc list-inside space-y-1 text-gray-600 mt-2 text-sm">
+                                <li>No noisy subsea pile driving, ensuring zero disturbance to marine ecosystems.</li>
+                                <li>Fully removable at decommissioning, enabling seabed restoration.</li>
+                            </ul>
+                           </div>
+                                <div class="p-3 bg-blue-100 border-l-4 border-blue-500 rounded-r-lg">
+                                    <p class="font-semibold text-blue-800">✔ Strategic Siting Advantage</p>
+                                    <p class="text-gray-700 text-sm">World Bank (2024) guidelines stress: floating wind **avoids** high-conflict near-shore zones (shipping, fishing, ecology), dramatically reducing project approval risk.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 
+          板块 3: 技术与原理 (Part 3)
+          演示者：组员 3
+          内容：核心技术 (Normal) + 核心原理 (Theory) + 先进技术 (Advanced)
+        -->
+        <section id="part3" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Part 3: Technology &amp; Principles (The Solution)</h2>
+                <p class="text-xl text-center text-gray-600 mb-16">How we build a safer, smarter, and more economical system.</p>
+
+                <!-- 3.1: 核心技术 (Normal Technology) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                    <!-- 视觉元素 -->
+                    <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                        <!-- <img src="[Your Chart Link]" alt="3D Render of Concrete Semi-Submersible" class="object-cover h-96 w-full rounded-lg"> -->
+                        <p class="text-gray-500">[Visual: 3D Render of Concrete Semi-Submersible]</p>
+                    </div>
+                    <!-- 要点 -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-blue-700">3.1 Core Technology (Normal Technology)</h3>
+                        <p class="text-lg text-gray-700">
+                            We selected the industry's most proven solution, the **Concrete Semi-Submersible**, optimized for Hong Kong's unique environment (typhoons, local industry).
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12 12 0 003 15c0 5.523 4.477 10 10 10s10-4.477 10-10c0-4.53-2.99-8.358-7.03-9.697z"></path></svg>
+                                <div><span class="font-semibold">Superior Stability:</span> Proven design to withstand complex South China Sea conditions.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                <div><span class="font-semibold">Activates Local Industry:</span> Concrete structure perfectly leverages Hong Kong's world-class civil construction capabilities.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0zM3 17H1m18 0h-2M3 12l2 3h14l2-3M5 15h14M9 6l1 3h4l1-3M10 3h4"></path></svg>
+                                <div><span class="font-semibold">Low-Risk Installation:</span> Fully assembled and commissioned at the quayside, then towed to site, minimizing costly and high-risk offshore heavy lifts.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3.2: 核心原理 (The Theory) -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-semibold text-center mb-12">3.2 Core Principles (The Theory)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- 原理 1: 水动力学 -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">1. Hydrodynamic Principle</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[Visual: Platform Stability Principles Diagram]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">Theory:</span> Unlike Spar (ballast-stabilized) or TLP (tension-stabilized), our **Semi-Submersible** relies on a large **waterplane area** for stability, making it the ideal choice for typhoon-prone regions.
+                            </p>
+                        </div>
+                        <!-- 原理 2: 结构动力学 -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">2. Structural Dynamics Principle</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[Visual: Mooring Tension in Typhoon]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">Theory:</span> The platform faces immense **dynamic structural loads** in extreme seas. The mooring system is critical for absorbing this energy to prevent catastrophic failure and ensure survival.
+                            </p>
+                        </div>
+                        <!-- 原理 3: 气动-水动耦合 -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">3. Aero-Hydro Coupling Principle</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[Visual: Negative Damping / Coupled Equations]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">Theory:</span> The unique challenge of floating: platform motion (hydro) interacts with turbine thrust (aero), creating "**negative aerodynamic damping**" (Li et al., 2025) which can lead to instability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3.3: 先进技术 (Advanced Technology) - 对应 Theory -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-center mb-12">3.3 Advanced Technology Innovations</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- 创新点 1 (对应 Theory 1) -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-lg transition duration-300 feature-card border-t-4 border-blue-500">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">1. Green Hydrogen Integration</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[Visual: Wind-to-Hydrogen Infographic]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">Application (links to Theory 1):</span> Leveraging the platform's **hydrodynamic stability**, our design is ready to host hydrogen electrolysis modules, creating future revenue streams.
+                            </p>
+                        </div>
+                        <!-- 创新点 2 (对应 Theory 2) -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-lg transition duration-300 feature-card border-t-4 border-blue-500">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">2. Advanced Synthetic Mooring</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[Visual: Mooring Load Comparison Chart]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">Application (links to Theory 2):</span> To solve the **structural load challenge**, we use synthetic ropes. Data (Pillai et al., 2022) confirms this <span class="font-bold text-red-600 text-lg">reduces peak anchor loads by 84%</span>, cutting costs and extending fatigue life.
+                            </p>
+                        </div>
+                        <!-- 创新点 3 (对应 Theory 3) -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-lg transition duration-300 feature-card border-t-4 border-blue-500">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">3. Smart Coupled Control</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[Visual: Typhoon Survivability (Zhang et al., 2024)]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">Application (links to Theory 3):</span> To counter "**negative damping**," our advanced control system ensures stability. It's **Typhoon-Certified** (Zhang et al., 2024), proven to remain stable even during a mooring line failure in a typhoon.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          板块 4: 香港案例 (Part 4 / Target)
+          演示者：组员 4
+          内容：香港项目概览 + 战略价值 (投资机遇)
+        -->
+        <section id="part4" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Part 4: Hong Kong Case (The Target)</h2>
+                <p class="text-xl text-center text-gray-600 mb-16">Why Hong Kong is the perfect starting point and hub.</p>
+                
+                <!-- 4.1: 香港项目概览 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                        <!-- <img src="[Your Chart Link]" alt="HK Southeastern Waters Project Map" class="object-cover h-96 w-full rounded-lg"> -->
+                        <p class="text-gray-500">[Visual: HK Southeastern Waters Project Map]</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Hong Kong Southeastern Waters 255MW Project</h3>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                            <!-- "Form" (表格) -->
+                            <table class="min-w-full">
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Planned Capacity</td>
+                                        <td class="p-4 font-semibold text-gray-900">255 MW</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Location</td>
+                                        <td class="p-4 font-semibold text-gray-900">Southeastern Waters, HK (&lt; 30m depth)</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Technology</td>
+                                        <td class="p-4 font-semibold text-gray-900">Concrete Semi-Submersible (Floating)</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Annual Generation</td>
+                                        <td class="p-4 font-semibold text-gray-900">Power for ~80,000 homes¹</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="p-4 font-medium text-gray-600">Emissions Reduction</td>
+                                        <td class="p-4 font-semibold text-gray-900">~380,000 tonnes of CO₂ avoided annually¹</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 text-right">
+                            Source 1: Est. from Ramboll &amp; CLP (2009) EIA Report.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4.2: 战略价值 (Investment Case) -->
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-8">The Investment Case: A "Strategic Springboard"</h3>
+                    <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center mb-8">
+                        <!-- <img src="[Your Chart Link]" alt="Strategic Springboard Concept Map" class="object-contain h-96 w-full rounded-lg"> -->
+                        <p class="text-gray-500">[Visual: "Strategic Springboard" Concept Map - HK -> South China Sea]</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md stat-card border-none">
+                            <div class="text-5xl font-bold text-blue-600 mb-3">1,582 GW</div>
+                            <h4 class="text-xl font-semibold mb-2">The Long-Term Prize</h4>
+                            <p class="text-gray-700">The World Bank (2020) quantifies the floating wind potential in the South China Sea. A trillion-dollar blue ocean market.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md stat-card border-none">
+                            <div class="text-5xl font-bold text-blue-600 mb-3">>22 GW</div>
+                            <h4 class="text-xl font-semibold mb-2">The Immediate Market</h4>
+                            <p class="text-gray-700">Neighboring Guangdong &amp; Fujian have already planned major near-term offshore wind projects (46.7GW...pdf). The market is active now.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md stat-card border-none">
+                            <div class="text-3xl font-bold text-blue-600 mb-3">"CNOOC Guanlan"</div>
+                            <h4 class="text-xl font-semibold mb-2">The Proof of Concept</h4>
+                            <p class="text-gray-700">"CNOOC Guanlan" is already successfully operating in the South China Sea (Domestic Floating...pdf), proving this technology is ready for the region.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          板块 5: 联系我们 (Contact)
+          演示者：组员 4 (作为总结)
+        -->
+        <section id="contact" class="py-20 bg-blue-800 text-white">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+                <p class="text-lg text-blue-100 mb-10">
+                    We are seeking visionary investors, government, and industry partners to make this strategic vision a reality. Contact us for a detailed project prospectus and financial model.
+                </p>
+                
+                <!-- "Form" (联系表单) -->
+                <form class="bg-white text-gray-800 p-8 rounded-lg shadow-xl max-w-xl mx-auto text-left">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Email">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your area of interest..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white px-10 py-3 rounded-md font-bold text-lg hover:bg-blue-700 transition duration-300 w-full md:w-auto">
+                            Send Inquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Deep Blue Horizon Project Team. All rights reserved.</p>
+            <p class="text-sm mt-2">A strategic vision for Hong Kong's energy future.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
